@@ -1,0 +1,181 @@
+{
+  "navigation": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "blog": "Blog",
+    "login": "Login",
+    "register": "Sign Up",
+    "signUp": "Sign Up"
+  },
+  "footer": {
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "features": "Features",
+    "description": "Connecting salons, suppliers, and beauty professionals with powerful tools to grow your business",
+    "allRightsReserved": "All rights reserved"
+  },
+  "home": {
+    "hero": {
+      "title": "All-in-one Salon Platform",
+      "description": "Zaan is the comprehensive platform connecting salons, suppliers, and beauty professionals, providing integrated solutions for operations, sales, marketing, and finance.",
+      "cta": "Start Your Free Trial",
+      "watchDemo": "Watch Demo",
+      "allInOne": "All-in-one software",
+      "toManage": "to manage your",
+      "business": "business",
+      "softwareDelivers": "Zaan software delivers everything you need to improve appointment scheduling, staff management, customer management, marketing, inventory, and more.",
+      "requestDemo": "Request Demo",
+      "startFreeTrial": "Start Free Trial",
+      "noSetupCosts": "No setup costs or contract",
+      "startManaging": "Start managing your beauty business in minutes"
+    },
+    "valueProposition": {
+      "title": "Why Choose Zaan?",
+      "benefits": [
+        "Designed based on in-depth studies of the beauty industry",
+        "Addresses specific obstacles faced by salon owners",
+        "Enables efficient and effective management of all business operations",
+        "Contributes to increased sales and business growth",
+        "Helps beauty centers thrive by providing innovative solutions"
+      ],
+      "startFreeTrial": "Start Free Trial",
+      "statistic": "85%",
+      "statisticDescription": "of salon owners and staff have more time to grow their business with Zaan",
+      "exploreFeatures": "Explore Features"
+    },
+    "features": {
+      "title": "Comprehensive Solutions for the Beauty Industry",
+      "description": "Discover how Zaan platform can help your business grow and thrive",
+      "operations": {
+        "title": "Operations Management",
+        "description": "Integrated tools for managing appointments, customers, and staff"
+      },
+      "sales": {
+        "title": "Sales & Marketing",
+        "description": "Effective solutions for marketing, sales management, and revenue growth"
+      },
+      "finance": {
+        "title": "Financial Management",
+        "description": "Advanced tools for budget, expense, and revenue management"
+      },
+      "sectionTitle": "We design Zaan system to cover all your salon needs,",
+      "sectionTitleBreak": "to help you work beautifully",
+      "sectionDescription": "Always focus on your growth, leave innovation to us.",
+      "readMore": "Read More"
+    },
+    "successPartners": {
+      "title": "Success Partners",
+      "description": "Trusted by leading salons and beauty centers around the world",
+      "SuccessStories":" Success Stories from Our Partners",
+      "SuccessStoriesDescription":"Join these successful businesses that have transformed their operations with Zaan Platform"
+    },
+    "testimonials": {
+      "title": "Trusted by Beauty Professionals",
+      "description": "See what salon owners and beauty professionals are saying about Zaan"
+    },
+    "cta": {
+      "title": "Ready to transform your salon business?",
+      "description": "Join thousands of beauty professionals growing their business with Zaan",
+      "startFreeTrial": "Start Free Trial",
+      "contactSales": "Contact Sales"
+    }
+  },
+  "features": {
+    "operations": {
+      "title": "Operations Management",
+      "description": "Integrated tools for managing appointments, customers, and staff",
+      "heroTitle": "Operations Management",
+      "heroDescription": "Streamline your salon operations with powerful tools designed to save time and reduce administrative work",
+      "startFreeTrial": "Start Free Trial",
+      "appointments": {
+        "title": "Appointments & Reservations",
+        "description": "Streamlined booking and appointment management system",
+        "onlineBooking":"Online Booking",
+        "reminders":"Appointment Reminders",
+        "calendarView":"Calendar View",
+        "staffAppointments":"Staff Appointments Management"
+      },
+      "customer": {
+        "title": "Customer Management",
+        "description": "Comprehensive tools for managing customer relationships"
+      },
+      "appointmentScheduling": {
+        "title": "Appointment Scheduling",
+        "description": "Our intuitive scheduling system makes booking appointments effortless for both staff and clients",
+        "feature1": "Online booking that syncs with your calendar in real-time",
+        "feature2": "Automated reminders to reduce no-shows by up to 60%",
+        "feature3": "Smart scheduling to optimize your staff's time"
+      },
+      "staffManagement": {
+        "title": "Staff Management",
+        "description": "Easily manage your team's schedules, performance, and commissions all in one place",
+        "feature1": "Flexible scheduling with time-off requests and availability management",
+        "feature2": "Performance tracking with service and retail sales metrics",
+        "feature3": "Automated commission calculations based on customizable rules"
+      },
+      "inventoryControl": {
+        "title": "Inventory Control",
+        "description": "Take control of your product inventory with powerful tracking and supplier management tools",
+        "feature1": "Real-time inventory tracking with low-stock alerts",
+        "feature2": "Automated purchase orders based on usage patterns",
+        "feature3": "Direct integration with supplier catalogs for easy ordering"
+      },
+      "ctaTitle": "Streamline Your Salon Operations Today",
+      "ctaDescription": "Join thousands of salons saving time and reducing stress with Zaan's operations tools",
+      "scheduleDemo": "Schedule Demo",
+      "subfeatures": {
+        "onlineBooking": "Online Booking",
+        "appointmentReminders": "Appointment Reminders",
+        "calendarView": "Calendar View",
+        "staffAppointments": "Staff Appointments",
+        "customerProfiles": "Customer Profiles",
+        "serviceRecords": "Service Records",
+        "loyaltyPrograms": "Loyalty Programs",
+        "customerCommunication": "Customer Communication"
+      }
+    },
+    "sales": {
+      "title": "Sales & Marketing",
+      "description": "Effective solutions for marketing, sales management, and revenue growth",
+      "pos": {
+        "title": "Point of Sale",
+        "description": "Efficient and user-friendly point of sale system"
+      },
+      "subfeatures": {
+        "emailCampaigns": "Email Campaigns",
+        "smsMarketing": "SMS Marketing",
+        "whatsappIntegration": "WhatsApp Integration",
+        "offersDiscounts": "Offers & Discounts",
+        "invoicesReceipts": "Invoices & Receipts",
+        "processPayments": "Process Payments",
+        "taxManagement": "Tax Management"
+      }
+    },
+    "finance": {
+      "title": "Financial Management",
+      "description": "Advanced tools for budget, expense, and revenue management",
+      "payroll": {
+        "title": "Payroll Management",
+        "description": "Comprehensive payroll processing and management"
+      },
+      "accounting": {
+        "title": "Accounting & Reporting",
+        "description": "Complete accounting and financial reporting tools"
+      },
+      "subfeatures": {
+        "expenseRevenue": "Expense & Revenue",
+        "budgetPlanning": "Budget Planning",
+        "financialReports": "Financial Reports",
+        "paymentVouchers": "Payment Vouchers",
+        "salaryCommission": "Salary & Commission",
+        "taxInsurance": "Tax & Insurance"
+      }
+    }
+  }
+}

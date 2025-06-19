@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 187 33% 97%; /* f1f8f9 */
+    --foreground: 191 62% 22%; /* 18515b */
+    --card: 187 33% 97%; /* f1f8f9 */
+    --card-foreground: 191 62% 22%; /* 18515b */
+    --popover: 187 33% 97%; /* f1f8f9 */
+    --popover-foreground: 191 62% 22%; /* 18515b */
+    --primary: 187 100% 38%; /* 00acc1 */
+    --primary-foreground: 187 33% 97%; /* f1f8f9 */
+    --secondary: 191 62% 22%; /* 18515b */
+    --secondary-foreground: 187 33% 97%; /* f1f8f9 */
+    --muted: 270 80% 90%; /* decbfb lighter */
+    --muted-foreground: 191 62% 22%; /* 18515b */
+    --accent: 25 50% 86%; /* ecd8c9 */
+    --accent-foreground: 191 62% 22%; /* 18515b */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 187 33% 97%; /* f1f8f9 */
+    --border: 187 100% 38% / 0.2; /* 00acc1 with opacity */
+    --input: 187 100% 38% / 0.2; /* 00acc1 with opacity */
+    --ring: 187 100% 38%; /* 00acc1 */
+    --radius: 0.75rem;
+    --chart-1: 187 100% 38%; /* 00acc1 */
+    --chart-2: 191 62% 22%; /* 18515b */
+    --chart-3: 270 80% 90%; /* decbfb */
+    --chart-4: 25 50% 86%; /* ecd8c9 */
+    --chart-5: 152 60% 85%; /* c3eedb */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-foreground;
+  }
+
+  /* RTL Support */
+  [dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+  }
+
+  [dir="rtl"] .rtl-mirror {
+    direction: rtl;
+    text-align: right;
+  }
+}
