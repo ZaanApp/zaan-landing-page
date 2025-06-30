@@ -26,19 +26,19 @@ import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useLanguage } from "@/app/providers";
 import { ThemeSwitcher } from "@/components/theme-switcher";
+import Image from "next/image";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur  supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-palette-darkTeal">
-              Zaan
-            </span>
+       <Image src="/logo.png" alt="Logo" className="h-21  w-auto" width={1000} height={1000}/>
+           
           </Link>
 
           <nav className="hidden md:flex gap-6">
