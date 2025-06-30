@@ -280,7 +280,7 @@ export default function CustomerCommunicationPage() {
                   src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=800&q=80"
                   alt="Automated messaging dashboard"
                   width={600}
-                  height={400}
+                  height={400}  
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -296,10 +296,10 @@ export default function CustomerCommunicationPage() {
             <div className="lg:w-1/2">
               <div className="relative rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80"
+                  src="/Customer-Communication images/Customer-Communication-2.png"
                   alt="Personalized marketing campaigns"
                   width={600}
-                  height={400}
+                  height={600}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -379,10 +379,10 @@ export default function CustomerCommunicationPage() {
             <div className="lg:w-1/2 order-1 lg:order-2">
               <div className="relative rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+                  src="/Customer-Communication images/Customer-Communication-1.png"
                   alt="Client feedback and reviews"
-                  width={600}
-                  height={400}
+                  width={700}
+                  height={500}
                   className="w-full h-auto object-cover"
                 />
               </div>
