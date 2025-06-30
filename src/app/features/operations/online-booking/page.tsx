@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/layout/footer";
 import {
@@ -10,257 +11,363 @@ import {
   CreditCard,
   Smartphone,
   Zap,
+  MapPin,
+  Star,
+  Twitter,
+  Phone,
+  Mail,
+  Instagram,
+  Facebook,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import ServicesTabs from "@/components/ServicesTabs";
+import Gallery from "@/components/Gallery";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { AvatarFallback, AvatarImage,Avatar } from "@radix-ui/react-avatar";
 
 export default function OnlineBookingPage() {
+  const [language, setLanguage] = useState<"en" | "ar">("en");
+
+  const content = {
+    en: {
+      hero: {
+        title: "Nai Beauty Boutique",
+        subtitle: "Premium Beauty Services",
+      },
+      info: {
+        rating: "4.8",
+        reviews: "(299)",
+        openUntil: "Open until 10:00PM",
+        location: "King Salman Neighborhood, Riyadh",
+        getDirections: "Get directions",
+      },
+      services: {
+        title: "Our Services",
+        bookNow: "Book Now",
+      },
+      team: {
+        title: "Team",
+        seeAll: "See all",
+      },
+      gallery: {
+        title: "Our Work",
+      },
+      contact: {
+        title: "Additional information",
+        openingTimes: "Opening times",
+        instantConfirmation: "Instant Confirmation",
+        payByApp: "Pay by app",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        hours: "2:00PM - 10:00PM",
+        phone: "582792728",
+        email: "info.naibeautyboutique@gmail.com",
+      },
+    },
+    ar: {
+      hero: {
+        title: "ناي بيوتي بوتيك",
+        subtitle: "خدمات تجميل متميزة",
+      },
+      info: {
+        rating: "4.8",
+        reviews: "(299)",
+        openUntil: "مفتوح حتى 10:00 مساءً",
+        location: "حي الملك سلمان، الرياض",
+        getDirections: "الحصول على الاتجاهات",
+      },
+      services: {
+        title: "خدماتنا",
+        bookNow: "احجز الآن",
+      },
+      team: {
+        title: "الفريق",
+        seeAll: "عرض الكل",
+      },
+      gallery: {
+        title: "أعمالنا",
+      },
+      contact: {
+        title: "معلومات إضافية",
+        openingTimes: "أوقات العمل",
+        instantConfirmation: "تأكيد فوري",
+        payByApp: "الدفع عبر التطبيق",
+        days: [
+          "الإثنين",
+          "الثلاثاء",
+          "الأربعاء",
+          "الخميس",
+          "الجمعة",
+          "السبت",
+          "الأحد",
+        ],
+        hours: "2:00 مساءً - 10:00 مساءً",
+        phone: "582792728",
+        email: "info.naibeautyboutique@gmail.com",
+      },
+    },
+  };
+
+  const t = content[language];
+  const dir = language === "ar" ? "rtl" : "ltr";
+
+  // Mock team data
+  const teamMembers = [
+    {
+      name: "Irene",
+      role: "",
+      rating: null,
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Irene",
+    },
+    {
+      name: "Norhawa",
+      role: "",
+      rating: null,
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Norhawa",
+    },
+    {
+      name: "Salome",
+      role: "",
+      rating: null,
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Salome",
+    },
+    {
+      name: "Cherry",
+      role: "Nail Technician",
+      rating: 5.0,
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Cherry",
+    },
+    {
+      name: "Jovelyn",
+      role: "Nail Technical",
+      rating: 4.9,
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jovelyn",
+    },
+    {
+      name: "Olivia",
+      role: "Nail Technician",
+      rating: 4.7,
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Olivia",
+    },
+    {
+      name: "Gerlita",
+      role: "Nail Technician",
+      rating: 4.9,
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Gerlita",
+    },
+    {
+      name: "Rubilyn",
+      role: "Beautician",
+      rating: 4.7,
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rubilyn",
+    },
+  ];
   return (
     <div>
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-background">
-        <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col items-center text-center">
-            <div className="inline-block p-3 rounded-full bg-primary/10 mb-6">
-              <Calendar className="h-8 w-8 text-primary" />
+   <main
+      className={`flex min-h-screen flex-col items-center bg-white ${language === "ar" ? "font-arabic" : ""}`}
+      dir={dir}
+    >
+      
+
+      {/* Hero Section with Video Background */}
+      <section className="w-full h-[70vh] relative mt-16">
+        <div className="absolute inset-0 bg-black/20 z-10"></div>
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source
+            src="https://images.unsplash.com/video/upload/v1612099975/production%20ID%204587884_qqgq4z.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">
+            {t.hero.title}
+          </h1>
+          <p className="text-xl md:text-2xl">{t.hero.subtitle}</p>
+        </div>
+      </section>
+
+      {/* Salon Info Bar */}
+      <section className="w-full bg-white py-4 border-b">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-2">
+            <div className="flex items-center">
+              <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Online Reservations with Zaan
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mb-10">
-              Be available 24/7... Give your clients the freedom to book their
-              appointments from anywhere, at any time!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" asChild>
-                <Link href="/register">Start Free Trial</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/pricing">View Pricing</Link>
-              </Button>
-            </div>
+            <span className="font-bold">{t.info.rating}</span>
+            <span className="text-gray-500">{t.info.reviews}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Clock className="h-5 w-5 text-gray-500" />
+            <span>{t.info.openUntil}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MapPin className="h-5 w-5 text-gray-500" />
+            <span>{t.info.location}</span>
+            <a href="#" className="text-purple-600 hover:underline">
+              {t.info.getDirections}
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Introduction Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className="container mx-auto max-w-4xl text-center">
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            With the online booking feature in the Zaan system, there are no
-            missed calls, no overlapping appointments, and no unorganized work
-            schedules.
-          </p>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-4">
-            Zaan system gives you a smart page to easily receive online
-            bookings, which makes the work schedule in your salon always
-            organized... and your client is always comfortable... even while you
-            are sleeping!
-          </p>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">
-              Advantages of Online Reservations in the Zaan System
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Everything you need for a seamless online booking experience
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-card rounded-lg p-6 shadow-sm border">
-              <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-lg mb-4">
-                <Globe className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Dedicated Booking Page
-              </h3>
-              <p className="text-muted-foreground">
-                Create an elegant page with your salon's name and logo,
-                displaying services, packages, and offers in an organized manner
-                with clear descriptions and images.
-              </p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="bg-card rounded-lg p-6 shadow-sm border">
-              <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-lg mb-4">
-                <Zap className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Fully Automated Reservations
-              </h3>
-              <p className="text-muted-foreground">
-                Once a customer selects a service and time, the reservation is
-                automatically confirmed and linked to available staff in the
-                schedule without manual intervention.
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="bg-card rounded-lg p-6 shadow-sm border">
-              <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-lg mb-4">
-                <Clock className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Real-Time Availability
-              </h3>
-              <p className="text-muted-foreground">
-                Display only available appointments in real-time according to
-                staff schedules and service types, preventing overlaps and
-                duplicate bookings.
-              </p>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="bg-card rounded-lg p-6 shadow-sm border">
-              <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-lg mb-4">
-                <Bell className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Instant Notifications
-              </h3>
-              <p className="text-muted-foreground">
-                Send confirmation and reminder messages via SMS or WhatsApp to
-                ensure customer attendance and reduce cancellations.
-              </p>
-            </div>
-
-            {/* Feature 5 */}
-            <div className="bg-card rounded-lg p-6 shadow-sm border">
-              <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-lg mb-4">
-                <CreditCard className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Flexible Payment Options
-              </h3>
-              <p className="text-muted-foreground">
-                Choose from multiple reservation methods: deposits, full
-                payment, or pay upon arrival. All transactions are automatically
-                recorded and invoiced.
-              </p>
-            </div>
-
-            {/* Feature 6 */}
-            <div className="bg-card rounded-lg p-6 shadow-sm border">
-              <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-lg mb-4">
-                <Share2 className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Shareable Link</h3>
-              <p className="text-muted-foreground">
-                Publish your booking page link anywhere or send it via
-                WhatsApp/SMS, targeting specific customers with personalized
-                offers for instant reservations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Client Experience Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative aspect-video overflow-hidden rounded-xl">
-              <Image
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80"
-                alt="Easy booking interface"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold">
-                Easy and Simple Interface for Clients
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Zaan's online reservations page provides an easy and quick
-                experience for making and confirming reservations at any time
-                and from anywhere, without the need to download an application
-                and without complexity.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                With the push of a button, your customer chooses the service and
-                time and books with confidence.
-              </p>
-              <div className="flex items-center gap-2 text-primary">
-                <Smartphone className="h-5 w-5" />
-                <span className="font-medium">No app download required</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Marketing Integration Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 order-2 md:order-1">
-              <h2 className="text-3xl font-bold">
-                Integration with Marketing Solutions
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                With Zaan, link offers, packages and daily deals to the online
-                booking page directly and in an updated manner, to encourage
-                your customers to book more services and get to know your
-                services more closely.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <ArrowRight className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span>
-                    Promote special offers directly on your booking page
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ArrowRight className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span>
-                    Showcase package deals to increase average booking value
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ArrowRight className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span>
-                    Feature daily deals to drive bookings during slower periods
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="relative aspect-video overflow-hidden rounded-xl order-1 md:order-2">
-              <Image
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
-                alt="Marketing integration"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary/5">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Make your salon keep pace with the era of development with Zaan
+      {/* Services Section */}
+      <section id="services" className="w-full py-12">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            {t.services.title}
           </h2>
-          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Try the online booking system from Zaan... and give your clients
-            more convenience, and your salon to get rid of the chaos.
-          </p>
-          <Button size="lg" asChild>
-            <Link href="/register">Start Your Free Trial Today</Link>
-          </Button>
+          <ServicesTabs language={language} />
         </div>
       </section>
-      <Footer />
+
+      {/* Team Section */}
+      <section id="team" className="w-full py-12 bg-gray-50">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold mb-8">{t.team.title}</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {teamMembers.slice(0, 8).map((member, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center"
+              >
+                <Avatar className="h-24 w-24 mb-3">
+                  <AvatarImage src={member.image} alt={member.name} />
+                  <AvatarFallback className="bg-purple-100 text-purple-600 text-xl">
+                    {member.name.charAt(0)}
+                  </AvatarFallback>
+                </Avatar>
+                <h3 className="font-medium text-lg">{member.name}</h3>
+                {member.rating && (
+                  <div className="flex items-center gap-1 mt-1">
+                    <span className="font-bold">{member.rating}</span>
+                    <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  </div>
+                )}
+                {member.role && (
+                  <p className="text-gray-500 text-sm">{member.role}</p>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Button variant="outline">{t.team.seeAll}</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section id="gallery" className="w-full py-12">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold mb-8">{t.gallery.title}</h2>
+          <Gallery />
+        </div>
+      </section>
+
+      {/* Contact & Information Section */}
+      <section id="about" className="w-full py-12 bg-gray-50">
+        <div className="container mx-auto grid md:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-2xl font-bold mb-6">
+              {t.contact.openingTimes}
+            </h2>
+            <div className="space-y-3">
+              {t.contact.days.map((day, index) => (
+                <div key={index} className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                    <span>{day}</span>
+                  </div>
+                  <span>{t.contact.hours}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-6">{t.contact.title}</h2>
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <div className="h-5 w-5 text-green-500">✓</div>
+                <span>{t.contact.instantConfirmation}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-5 w-5">💳</div>
+                <span>{t.contact.payByApp}</span>
+              </div>
+              <div className="flex items-center gap-2 mt-6">
+                <Phone className="h-5 w-5" />
+                <a href={`tel:${t.contact.phone}`} className="hover:underline">
+                  {t.contact.phone}
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-5 w-5" />
+                <a
+                  href={`mailto:${t.contact.email}`}
+                  className="hover:underline"
+                >
+                  {t.contact.email}
+                </a>
+              </div>
+              <div className="flex gap-4 mt-6">
+                <a href="#" className="text-gray-600 hover:text-purple-600">
+                  <Instagram className="h-6 w-6" />
+                </a>
+                <a href="#" className="text-gray-600 hover:text-purple-600">
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a href="#" className="text-gray-600 hover:text-purple-600">
+                  <Twitter className="h-6 w-6" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="w-full h-[400px] bg-gray-200">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6554831255814!2d46.6252213!3d24.7249403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee38cc5676b1d%3A0x6c6d8e1b2a1c3d4e!2sKing%20Salman%20Rd%2C%20Riyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+
+      {/* Footer */}
+    
+
+      {/* Mobile Book Now Button */}
+      <div className="fixed bottom-6 left-0 right-0 flex justify-center md:hidden z-50">
+        <Button size="lg" className="rounded-full px-8 shadow-lg">
+          {t.services.bookNow}
+        </Button>
+      </div>
+    </main>
     </div>
   );
 }
