@@ -42,10 +42,10 @@ export default function HeroSection() {
           </div>
           <div className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square">
             <Image
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80"
+              src="/hero-img.png"
               alt="Salon management software interface"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
