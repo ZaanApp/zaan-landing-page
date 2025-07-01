@@ -86,8 +86,7 @@ const ServicesTabs = ({ language = "en" }: ServiceTabsProps) => {
       descriptionAr: "عناية احترافية بالأظافر مع علاج الجلد الميت",
       duration: "45 min",
       durationAr: "45 دقيقة",
-      image:
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80",
+      image:"/place-holder.avif",
     },
     {
       id: "s2",

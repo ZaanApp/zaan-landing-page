@@ -284,7 +284,7 @@ export default function OnlineBookingPage() {
       </section>
 
       {/* Contact & Information Section */}
-      <section id="about" className="w-full py-12 bg-gray-50">
+      <section id="about" className="w-full py-8 bg-gray-50">
         <div className="container mx-auto grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-2xl font-bold mb-6">
@@ -346,7 +346,7 @@ export default function OnlineBookingPage() {
       </section>
 
       {/* Map Section */}
-      <section className="w-full h-[400px] bg-gray-200">
+      <section className="w-full h-[250px] bg-gray-200">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6554831255814!2d46.6252213!3d24.7249403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee38cc5676b1d%3A0x6c6d8e1b2a1c3d4e!2sKing%20Salman%20Rd%2C%20Riyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
           width="100%"
