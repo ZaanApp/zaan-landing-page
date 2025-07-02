@@ -22,6 +22,17 @@
   },
   "home": {
     "hero": {
+      "businessAnimation": [
+        "Your Salon",
+        "Spa",
+        "Beauty Center",
+        "Barber Shop",
+        "Skincare Clinic",
+        "Massage Center",
+        "Nail Spa",
+        "Kids Barber",
+        "Home Salon"
+      ],
       "title": "All-in-one Salon Platform",
       "description": "Zaan is the comprehensive platform connecting salons, suppliers, and beauty professionals, providing integrated solutions for operations, sales, marketing, and finance.",
       "cta": "Start Your Free Trial",
