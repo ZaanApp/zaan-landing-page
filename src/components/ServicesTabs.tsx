@@ -86,7 +86,7 @@ const ServicesTabs = ({ language = "en" }: ServiceTabsProps) => {
       descriptionAr: "عناية احترافية بالأظافر مع علاج الجلد الميت",
       duration: "45 min",
       durationAr: "45 دقيقة",
-      image:"/placeholder.jpg",
+      image:"/placeholder2.jpeg",
     },
     {
       id: "s2",
@@ -348,7 +348,7 @@ const ServicesTabs = ({ language = "en" }: ServiceTabsProps) => {
                 <img
                   src={service.image}
                   alt={isArabic ? service.nameAr : service.name}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
             )}

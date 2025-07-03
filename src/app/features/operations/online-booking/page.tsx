@@ -126,7 +126,7 @@ export default function OnlineBookingPage() {
       name: "Irene",
       role: "",
       rating: null,
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Irene",
+      image: "/profile_picture.png",
     },
     {
       name: "Norhawa",
@@ -232,7 +232,7 @@ export default function OnlineBookingPage() {
 
       {/* Services Section */}
       <section id="services" className="w-full py-12">
-        <div className="container mx-auto">
+        <div className="container mx-auto contain">
           <h2 className="text-3xl font-bold mb-8 text-center">
             {t.services.title}
           </h2>
@@ -251,7 +251,7 @@ export default function OnlineBookingPage() {
                 className="flex flex-col items-center text-center"
               >
                 <Avatar className="h-24 w-24 mb-3">
-                  <AvatarImage src={member.image} alt={member.name} />
+                  <AvatarImage src="/profile_picture.png" className="h-24 w-24" alt={member.name} />
                   <AvatarFallback className="bg-purple-100 text-purple-600 text-xl">
                     {member.name.charAt(0)}
                   </AvatarFallback>

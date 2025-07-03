@@ -47,9 +47,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}
-            className="text-bold inline-block whitespace-nowrap"
+            className="text-bold inline-block pt-2 "
           >
-            {words[index]}
+            {t(`home.hero.businessAnimation.${words[index]}`)}
           </motion.span>
         </AnimatePresence>
       </h1>
