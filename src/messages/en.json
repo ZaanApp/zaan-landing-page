@@ -158,6 +158,10 @@
         "title": "Point of Sale",
         "description": "Efficient and user-friendly point of sale system"
       },
+      "marketing": {
+        "title": "Digital Marketing",
+        "description": "Efficient and user-friendly point of sale system"
+      },
       "subfeatures": {
         "emailCampaigns": "Email Campaigns",
         "smsMarketing": "SMS Marketing",

@@ -17,6 +17,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        arabic: ["Cairo", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -55,6 +58,7 @@ const config = {
         palette: {
           lightBg: "#f1f8f9",
           darkTeal: "#18515b",
+          palettelightTeal: '#5d9aa9',
           teal: "#00acc1",
           lavender: "#decbfb",
           beige: "#ecd8c9",
