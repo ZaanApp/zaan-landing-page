@@ -13,6 +13,7 @@ import {
 import { Footer } from "@/components/layout/footer";
 import { Check, AlertCircle } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Draggable Employee Selector Component
 function DraggableEmployeeSelector() {
@@ -154,43 +155,15 @@ function DraggableEmployeeSelector() {
 
   return (
     <div className="w-full px-4 py-6 bg-gray-50 rounded-lg border-2 border-palette-teal/20 shadow-sm">
-      <div className="text-center mb-4">
-        <span className="text-sm font-medium">
-          Choose the number of users in your business
-        </span>
-      </div>
-
-      {/* No Slider Track - Removed */}
-
-      {/* Number Labels - Clickable */}
-      <div className="flex justify-between px-4 mb-6">
-        {Array.from({ length: MAX_EMPLOYEES }, (_, i) => (
-          <button
-            key={i + 1}
-            onClick={() => setEmployees(i + 1)}
-            className={`px-3 py-1 rounded-md text-sm ${employees === i + 1 ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
-          >
-            {i === 0 ? "Just Me" : i + 1}
-          </button>
-        ))}
-        <button
-          onClick={handleMoreThanTenClick}
-          className="px-3 py-1 rounded-md text-sm bg-gray-100 text-gray-700 hover:bg-gray-200"
-        >
-          11+
-        </button>
-      </div>
-
-      {/* Removed +10 Button as it's now integrated with the number labels */}
-
+    
       {/* Price Display */}
-      <div className="mt-4 p-4 bg-muted/30 rounded-lg text-center">
-        <p className="text-sm text-muted-foreground">Estimated Monthly Price</p>
+      <div className=" p-4 bg-muted/30 rounded-lg text-center">
+        <p className="text-sm text-muted-foreground">Estimated Anualy Price</p>
         <div className="mt-1 text-4xl font-bold text-palette-darkTeal">
-          {totalPrice} riyals
-        </div>
+          2300 <Image src="/logo/riyalicon.png" alt="" width={20} height={20} className="inline" />
+                 </div>
         <p className="mt-1 text-xs text-muted-foreground">
-          For {employees} employee{employees > 1 ? "s" : ""}
+        One flat rate — unlimited users.
         </p>
       </div>
 
@@ -345,51 +318,35 @@ export default function PricingPage() {
             <div className="mt-12 max-w-5xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="border-2 border-primary/20 shadow-lg overflow-hidden">
-                  <CardHeader className="text-center bg-white border-b-2 border-gray-100">
+                <CardHeader className="text-center bg-white border-b-2 border-gray-100">
                     <CardTitle className="text-2xl text-palette-darkTeal">
                       Here's what you'll pay:
                     </CardTitle>
-                    <CardDescription>
-                      99 riyals for first employee, 29 riyals for each
-                      additional. No hidden fees.
-                    </CardDescription>
+                    
                   </CardHeader>
+
                   <CardContent className="bg-white pt-6">
                     <div className="space-y-6">
                       {/* Employee Number Selector - Draggable */}
                       <div className="mb-6">
-                        <p className="text-sm text-muted-foreground mb-2 text-center">
-                          Monthly Subscription
+                        <p className="text-sm text-muted-foreground  text-center">
+                        Annual Subscription Pricing
                         </p>
-                        <div className="flex items-center justify-center mb-4">
-                          <span className="text-5xl font-bold text-palette-darkTeal">
-                            99
-                          </span>
-                          <div className="flex flex-col items-start ml-2">
-                            <span className="text-xl font-medium text-palette-darkTeal">
-                              riyals
-                            </span>
-                            <span className="text-xs text-muted-foreground">
-                              first employee/month
-                            </span>
-                          </div>
-                          <span className="text-3xl font-bold text-palette-darkTeal ml-4">
-                            +29
-                          </span>
-                          <div className="flex flex-col items-start ml-2">
-                            <span className="text-xl font-medium text-palette-darkTeal">
-                              riyals
-                            </span>
-                            <span className="text-xs text-muted-foreground">
-                              each additional
-                            </span>
-                          </div>
-                        </div>
+                        <div className="flex flex-col items-center justify-center mb-4">
+ 
+  
+
+  <span className="mt-2 text-xs text-muted-foreground text-center">
+    All features included — no hidden fees or per-user charges.
+  </span>
+</div>
+
 
                         <DraggableEmployeeSelector />
                       </div>
                     </div>
                   </CardContent>
+
                   <CardFooter className="bg-white border-t border-gray-100 pt-6 flex flex-col space-y-4">
                     <p className="text-center text-sm text-muted-foreground">
                       *Cancel anytime with no cancellation fees
@@ -398,7 +355,7 @@ export default function PricingPage() {
                       asChild
                       className="w-full bg-red-500 hover:bg-red-600 text-white"
                     >
-                      <Link href="/register">Start Free Trial</Link>
+                      <Link href="/register">Join Zaan Today</Link>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -630,7 +587,6 @@ export default function PricingPage() {
           </div>
         )}
       </main>
-      <Footer />
     </div>
   );
 }
