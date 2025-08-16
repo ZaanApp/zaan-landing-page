@@ -632,7 +632,7 @@ const ServicesTabs = ({ language = "en" }: ServiceTabsProps) => {
     <div className="w-full overflow-x-auto">
       <div className="flex flex-nowrap gap-1 pb-4 px-4 min-w-max">
         {mainCategories.map((category, index) => {
-          const IconComponent = category.image;
+          const IconComponent = category.image ?? "/default-icon.png";;
           return (
             <React.Fragment key={category.id}>
               <button

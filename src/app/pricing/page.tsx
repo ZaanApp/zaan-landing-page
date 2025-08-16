@@ -23,7 +23,7 @@ function DraggableEmployeeSelector() {
   const [currentX, setCurrentX] = useState(0);
   const [showContactModal, setShowContactModal] = useState(false);
   const sliderRef = useRef(null);
-  const trackRef = useRef(null);
+  const trackRef = useRef<HTMLDivElement>(null);;
   const MAX_EMPLOYEES = 10;
 
   // Calculate total price with new pricing structure
@@ -31,7 +31,7 @@ function DraggableEmployeeSelector() {
   const totalPrice = employees === 1 ? 99 : 99 + (employees - 1) * 29;
 
   // Handle drag start
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e: MouseEvent) => {
     // Don't prevent default here as it can block interactions
     setIsDragging(true);
     setStartX(e.clientX - currentX);
@@ -40,7 +40,7 @@ function DraggableEmployeeSelector() {
   };
 
   // Handle touch start for mobile
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     // Don't prevent default here as it can block all touch events
     setIsDragging(true);
     setStartX(e.touches[0].clientX - currentX);
@@ -49,7 +49,7 @@ function DraggableEmployeeSelector() {
   };
 
   // Handle mouse movement during drag
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
     const track = trackRef.current;
@@ -71,7 +71,7 @@ function DraggableEmployeeSelector() {
   };
 
   // Handle touch movement for mobile
-  const handleTouchMove = (e) => {
+  const handleTouchMove = (e: TouchEvent) => {
     if (!isDragging) return;
     e.preventDefault(); // Prevent scrolling while dragging
     const track = trackRef.current;
@@ -130,7 +130,7 @@ function DraggableEmployeeSelector() {
   }, [employees]);
 
   // Add keyboard support for accessibility
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "ArrowRight" || e.key === "ArrowUp") {
       setEmployees((prev) => Math.min(prev + 1, MAX_EMPLOYEES));
     } else if (e.key === "ArrowLeft" || e.key === "ArrowDown") {
