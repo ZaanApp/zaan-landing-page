@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
+import React from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,

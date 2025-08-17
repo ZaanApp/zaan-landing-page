@@ -8,7 +8,6 @@ import Link from "next/link";
 export default function FinancePage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-20 md:py-28 bg-background">
@@ -215,7 +214,6 @@ export default function FinancePage() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

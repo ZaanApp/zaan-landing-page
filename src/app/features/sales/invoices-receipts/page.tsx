@@ -172,7 +172,7 @@ export default function InvoicesReceiptsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
+                src="/Invoices-&-Receipts/Invoices-&-Receipts-3.png"
                 alt="Financial reporting dashboard"
                 fill
                 className="object-cover rounded-xl"
@@ -243,10 +243,10 @@ export default function InvoicesReceiptsPage() {
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden order-1 lg:order-2">
               <Image
-                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80"
+                src="/Invoices-&-Receipts/Invoices-&-Receipts-4.png"
                 alt="Digital invoice delivery"
                 fill
-                className="object-cover rounded-xl"
+                className="object-contain rounded-xl"
               />
             </div>
           </div>
@@ -257,12 +257,12 @@ export default function InvoicesReceiptsPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] rounded-xl overflow-hidden">
+            <div className="relative h-[400px] w-auto rounded-xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
+                src="/Invoices-&-Receipts/Invoices-&-Receipts-5.png"
                 alt="Tax compliance and reporting"
                 fill
-                className="object-cover rounded-xl"
+                className="object-contain rounded-xl "
               />
             </div>
             <div>

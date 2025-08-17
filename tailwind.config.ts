@@ -2,10 +2,10 @@ import type { Config } from "tailwindcss";
 
 const config = {
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+  "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  "./src/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   prefix: "",
   theme: {
@@ -17,6 +17,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        arabic: ["Cairo", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -55,6 +58,7 @@ const config = {
         palette: {
           lightBg: "#f1f8f9",
           darkTeal: "#18515b",
+          palettelightTeal: '#5d9aa9',
           teal: "#00acc1",
           lavender: "#decbfb",
           beige: "#ecd8c9",

@@ -18,12 +18,17 @@ const LanguageContext = createContext<LanguageContextType>({
 
 // Hook to use the language context
 export const useLanguage = () => useContext(LanguageContext);
+type ProvidersProps = {
+  children: React.ReactNode;
+  locale?: string;
+  messages?: any;
+};
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({ children, locale, messages }: ProvidersProps) {
   // Initialize language from localStorage or default to Arabic
   const [language, setLanguage] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("zaan-language") || "ar";
+      return localStorage.getItem("zaan-language") || locale|| "ar";
     }
     return "ar";
   });

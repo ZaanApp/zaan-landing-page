@@ -9,7 +9,7 @@ export function AlternatingSections() {
       description:
         "Get a comprehensive view of your salon's financial health at a glance. Our intuitive dashboard displays key metrics like daily revenue, expense categories, profit margins, and cash flow in real-time. Make informed decisions with up-to-the-minute financial data always at your fingertips.",
       imageSrc:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        "/Customer-Files/Customer-Files-in-Zaan-2.png",
       imageAlt: "Financial dashboard with charts and graphs",
       reverse: false,
       cta: {
@@ -22,7 +22,7 @@ export function AlternatingSections() {
       description:
         "Say goodbye to manual expense sorting. Our intelligent system automatically categorizes your expenses based on vendor information and transaction patterns. Easily track spending across categories like inventory, utilities, marketing, and staff costs. Generate expense reports with just a few clicks for better financial planning.",
       imageSrc:
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+        "/Customer-Files/Customer-Files-in-Zaan-3.png",
       imageAlt: "Expense categorization interface",
       reverse: true,
       cta: {
@@ -47,7 +47,7 @@ export function AlternatingSections() {
                   src={section.imageSrc}
                   alt={section.imageAlt}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>
