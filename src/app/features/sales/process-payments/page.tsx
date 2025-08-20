@@ -242,7 +242,7 @@ export default function ProcessPaymentsPage() {
 
             <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-lg border border-palette-mint/20">
               <Image
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
+                src="/ProcessPayment/image1.png"
                 alt="Secure payment processing"
                 width={600}
                 height={400}
@@ -259,7 +259,7 @@ export default function ProcessPaymentsPage() {
           <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
             <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-lg border border-palette-lavender/20">
               <Image
-                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80"
+                src="/ProcessPayment/image2.png"
                 alt="Streamlined checkout experience"
                 width={600}
                 height={400}
@@ -435,7 +435,7 @@ export default function ProcessPaymentsPage() {
 
             <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-lg border border-palette-beige/20">
               <Image
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
+                src="/ProcessPayment/image3.png"
                 alt="Financial records and reporting"
                 width={600}
                 height={400}

@@ -237,7 +237,7 @@ export default function CustomerProfilesPage() {
           <div className="grid gap-8 lg:grid-cols-2 items-center">
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80"
+                src="/Customer-Files/Customer-Files-in-Zaan-3.png"
                 alt="Personalized marketing dashboard"
                 fill
                 className="object-cover"
@@ -307,7 +307,7 @@ export default function CustomerProfilesPage() {
             </div>
             <div className="relative aspect-video rounded-xl overflow-hidden order-1 lg:order-2">
               <Image
-                src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=800&q=80"
+                src="/Customer-Files/Customer-Files-in-Zaan-2.png"
                 alt="Loyalty program integration"
                 fill
                 className="object-cover"

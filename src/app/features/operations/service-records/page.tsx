@@ -243,7 +243,7 @@ export default function ServiceRecordsPage() {
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden order-1 lg:order-2">
               <Image
-                src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80"
+                src="/ServiceRecords/image2.png"
                 alt="Client history and service records"
                 fill
                 className="object-cover"
@@ -259,7 +259,7 @@ export default function ServiceRecordsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="relative h-[400px] rounded-xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&q=80"
+                src="/ServiceRecords/image1.png"
                 alt="Personalized marketing based on customer data"
                 fill
                 className="object-cover"
@@ -360,7 +360,7 @@ export default function ServiceRecordsPage() {
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden order-1 lg:order-2">
               <Image
-                src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80"
+                src="/ServiceRecords/image3.png"
                 alt="Loyalty program integration"
                 fill
                 className="object-cover"

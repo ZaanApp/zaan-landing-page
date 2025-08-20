@@ -12,7 +12,7 @@ export default function AlternatingSections() {
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
           <div className="lg:w-1/2">
             <Image
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
+              src="/PaymentVoucher/image1.png"
               width={600}
               height={400}
               alt="Financial document management"

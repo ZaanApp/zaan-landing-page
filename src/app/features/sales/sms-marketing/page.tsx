@@ -260,7 +260,7 @@ export default function SmsMarketingPage() {
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg order-1 lg:order-2">
               <Image
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+                src="/SMSMarketing/image1.png"
                 alt="Personalized customer journey"
                 fill
                 className="object-cover"

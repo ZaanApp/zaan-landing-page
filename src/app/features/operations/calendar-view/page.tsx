@@ -33,7 +33,7 @@ export default function CalendarViewPage() {
           </div>
           <div className="mt-12 relative aspect-video overflow-hidden rounded-xl max-w-3xl mx-auto shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80"
+              src="/AppointmentCalenderImages/Offers-&-Discounts-4.png"
               alt="Calendar view interface"
               fill
               className="object-cover"
@@ -186,7 +186,7 @@ export default function CalendarViewPage() {
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div className="relative aspect-video overflow-hidden rounded-xl shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+                src="/AppointmentCalenderImages/calender-appointments-2.png"
                 alt="Daily overview calendar"
                 fill
                 className="object-cover"
@@ -263,7 +263,7 @@ export default function CalendarViewPage() {
             </div>
             <div className="relative aspect-video overflow-hidden rounded-xl shadow-lg order-1 md:order-2">
               <Image
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80"
+                src="/AppointmentCalenderImages/calender-appointments-3.png"
                 alt="Drag and drop appointment editing"
                 fill
                 className="object-cover"
@@ -279,7 +279,7 @@ export default function CalendarViewPage() {
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div className="relative aspect-video overflow-hidden rounded-xl shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                src="/AppointmentCalenderImages/calender-appointments-2.png"
                 alt="Color-coded appointment status"
                 fill
                 className="object-cover"

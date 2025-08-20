@@ -11,7 +11,7 @@ export default function AlternatingSections() {
           <div className="w-full lg:w-1/2 relative">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
+                src="/Salary-comm-managment/image1.png"
                 alt="Team performance tracking dashboard"
                 width={600}
                 height={400}
@@ -104,7 +104,7 @@ export default function AlternatingSections() {
           <div className="w-full lg:w-1/2 relative">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+                src="/Salary-comm-managment/image2.png"
                 alt="Automated payroll processing"
                 width={600}
                 height={400}

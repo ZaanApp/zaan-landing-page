@@ -277,7 +277,7 @@ export default function CustomerCommunicationPage() {
             <div className="lg:w-1/2 order-1 lg:order-2">
               <div className="relative rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=800&q=80"
+                  src="/Customer-Communication images/Customer-Communication-3.png"
                   alt="Automated messaging dashboard"
                   width={600}
                   height={400}  

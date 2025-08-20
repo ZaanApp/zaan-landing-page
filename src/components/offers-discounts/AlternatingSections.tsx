@@ -13,7 +13,7 @@ export default function AlternatingSections() {
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
           <div className="lg:w-1/2">
             <Image
-              src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80"
+              src="/OffersAndDiscounts/Offers-&-Discounts-4.png"
               width={600}
               height={400}
               alt="Client loyalty program"
@@ -65,7 +65,7 @@ export default function AlternatingSections() {
         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
           <div className="lg:w-1/2">
             <Image
-              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80"
+              src="/OffersAndDiscounts/Offers-&-Discounts-3.png"
               width={600}
               height={400}
               alt="Seasonal promotion campaign"
