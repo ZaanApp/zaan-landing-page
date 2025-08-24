@@ -2,10 +2,18 @@
 
 const nextConfig = {
   images: {
-    domains: ["images.unsplash.com", "api.dicebear.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "api.dicebear.com",
+      },
+    ],
   },
 };
-
 if (process.env.NEXT_PUBLIC_TEMPO) {
   nextConfig["experimental"] = {
     // NextJS 13.4.8 up to 14.1.3:
